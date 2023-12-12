@@ -1,0 +1,38 @@
+[
+    {
+        "object": "organization",
+        "config": {
+            "extract_type": "hierarchy_snapshot",
+            "parent": null,
+            "interval_time_to_extract": 5,
+            "query_key": "id"
+        }
+    },
+    {
+        "object": "repository",
+        "config": {
+            "extract_type": "hierarchy_snapshot",
+            "parent": "organization",
+            "interval_time_to_extract": 5,
+            "query_key": "id"
+        }
+    },
+    {
+        "object": "pullRequest",
+        "config": {
+            "extract_type": "hierarchy_snapshot",
+            "parent": "repository",
+            "interval_time_to_extract": 5,
+            "query_key": "id"
+        }
+    },
+    {
+        "object": "language",
+        "config": {
+            "extract_type": "hierarchy_snapshot",
+            "parent": "repository",
+            "interval_time_to_extract": 5,
+            "query_key": "id"
+        }
+    }
+]
